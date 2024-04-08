@@ -1,0 +1,176 @@
+/* General Reset, Body Styles, and Typography */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease;
+}
+
+/* Typography, Animations, and Responsive Design Adjustments */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333;
+    font-weight: 300;
+}
+
+p {
+    line-height: 1.6;
+    color: #666;
+}
+
+a {
+    color: #007bff;
+    animation: linkFadeIn 0.5s ease-out;
+}
+
+a:hover, a:focus {
+    color: #fd7e14;
+    background-color: transparent;
+}
+
+/* Main Layout and Carousel Improvements */
+.main-content {
+    padding-top: 70px; /* Adjust based on navbar height */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #343a40;
+    padding: 1rem;
+}
+
+.navbar-brand, .nav-link {
+    color: #fd7e14 !important;
+    transition: color 0.3s ease;
+}
+
+.navbar .ms-auto .nav-link, .navbar .nav-item .nav-link {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+/* Footer Enhancements */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer img {
+    max-height: 50px;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
+
+footer a {
+    color: #fd7e14;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #fc9626;
+}
+
+/* Section Styling */
+section {
+    padding: 2rem 0;
+}
+
+/* Form Styling Adjustments */
+.container.py-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.needs-validation .form-control, .needs-validation .btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 90%;
+}
+
+.needs-validation + p {
+    text-align: center;
+}
+
+.social-media-handles {
+    position: relative;
+    bottom: auto;
+    width: 100%;
+    font-size: 2rem;
+    padding-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-item img { height: 50vh; }
+    .footer { padding: 10px 0; position: relative; }
+}
+
+@keyframes linkFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Carousel */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 50vh;
+    }
+}
+
+.carousel-item img {
+    height: 75vh;
+    object-fit: contain;
+}
+
+/* Image sizes */
+.object-fit-sm-contain {
+    max-width: 100px;
+}
+
+.object-fit-md-contain {
+    max-width: 200px;
+}
+
+.object-fit-lg-contain {
+    max-width: 300px;
+}
+
+.object-fit-xl-contain {
+    max-width: 400px;
+}
+
+.object-fit-xxl-contain {
+    max-width: 500px;
+}
+
+/* Positioning */
+.position-static {
+    position: static;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.position-sticky {
+    position: sticky;
+}
