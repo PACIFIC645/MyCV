@@ -28,7 +28,7 @@ MyCV is a personal web-based portfolio that showcases my skills and experiences 
 
 ## Installation
 1. **Clone the repository**:
-   ```bas
+   ```bash
    git clone https://github.com/Pacific645/MyCV.git
    cd MyCV
    ```
@@ -36,7 +36,7 @@ MyCV is a personal web-based portfolio that showcases my skills and experiences 
    Open the file in a web browser to view the website.
 
 ## Usage
-Visit the hosted version of the site on GitHub Pages at `https://Pacific645.github.io/MyCV/`, or open the `index.html` file locally in a web browser to view the CV.
+Visit the hosted version of the site on GitHub Pages at [MyCV](https://Pacific645.github.io/MyCV/), or open the `index.html` file locally in a web browser to view the CV.
 
 ## Contributing
 Interested in contributing? You can fork the repository and submit pull requests with your suggested changes.

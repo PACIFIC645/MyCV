@@ -8,11 +8,21 @@ body {
     transition: background-color 0.5s ease;
 }
 
-/* Typography, Animations, and Responsive Design Adjustments */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Helvetica Neue', sans-serif;
-    color: #333;
-    font-weight: 300;
+    color: #faf9f9;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    margin: 0;
+    transition: background-color 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 p {
@@ -22,7 +32,7 @@ p {
 
 a {
     color: #007bff;
-    animation: linkFadeIn 0.5s ease-out;
+    transition: all 0.3s ease;
 }
 
 a:hover, a:focus {
@@ -32,23 +42,26 @@ a:hover, a:focus {
 
 /* Main Layout and Carousel Improvements */
 .main-content {
-    padding-top: 70px; /* Adjust based on navbar height */
+    padding-top: 70px;
 }
 
-/* Navbar Styles */
+/* Navigation Bar */
 .navbar {
-    background-color: #343a40;
-    padding: 1rem;
+    background-color: #2c3e50;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand, .nav-link {
-    color: #fd7e14 !important;
-    transition: color 0.3s ease;
+    color: #fff !important;
+    transition: all 0.3s ease;
 }
 
-.navbar .ms-auto .nav-link, .navbar .nav-item .nav-link {
-    text-align: right;
-    padding-right: 1rem;
+.nav-link:hover {
+    color: #fd7e14;
+    text-decoration: none;
+    font-weight: bold;
+    transform: scale(1.05);
 }
 
 /* Footer Enhancements */
@@ -58,6 +71,7 @@ footer {
     padding: 20px 0;
     font-size: 1rem;
     text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 footer img {
@@ -70,107 +84,177 @@ footer img:hover {
 
 footer a {
     color: #fd7e14;
-    transition: color 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 footer a:hover {
     color: #fc9626;
 }
 
+/* Additional Interactivity for Footer */
+.footer-logo img,
+.footer-linkedin {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-linkedin:hover {
+    color: #285e91;
+    text-decoration: none;
+}
+
 /* Section Styling */
-section {
-    padding: 2rem 0;
+.text-block {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
 }
 
-/* Form Styling Adjustments */
-.container.py-5 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.text-block h2,
+.text-block h3,
+.text-block h4,
+.text-block h5,
+.text-block h6 {
+    background: linear-gradient(90deg, #000, #000), linear-gradient(90deg, #fff, #fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    -webkit-text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
 }
 
-.needs-validation .form-control, .needs-validation .btn {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 90%;
+.text-block h2:hover,
+.text-block h3:hover,
+.text-block h4:hover,
+.text-block h5:hover,
+.text-block h6:hover {
+    transform: scale(1.05);
 }
 
-.needs-validation + p {
+/* Contact Form Header Styling */
+.section-heading {
+    font-size: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
-.social-media-handles {
-    position: relative;
-    bottom: auto;
+/* Contact Form Subheading Styling */
+.section-subheading {
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+/* Animate on hover */
+.section-subheading:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Me Heading Styling */
+.section-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Contact Form Styling */
+.contact-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container form label {
+    font-weight: bold;
+}
+
+.contact-container form input[type="text"],
+.contact-container form input[type="email"],
+.contact-container form textarea {
     width: 100%;
-    font-size: 2rem;
-    padding-top: 20px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .carousel-item img { height: 50vh; }
-    .footer { padding: 10px 0; position: relative; }
+.contact-container form textarea {
+    height: 150px;
 }
 
-@keyframes linkFadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+.contact-container form button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Carousel */
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .carousel-item img {
-        height: 50vh;
-    }
+.contact-container form button:hover {
+    background-color: #0056b3;
 }
 
-.carousel-item img {
-    height: 75vh;
-    object-fit: contain;
+/* Image Grid Container */
+.image-grid-container {
+    margin: 50px auto;
+    max-width: 900px;
 }
 
-/* Image sizes */
-.object-fit-sm-contain {
-    max-width: 100px;
+/* Image Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
 }
 
-.object-fit-md-contain {
-    max-width: 200px;
+.grid-item {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
 }
 
-.object-fit-lg-contain {
-    max-width: 300px;
-}
-
-.object-fit-xl-contain {
-    max-width: 400px;
-}
-
-.object-fit-xxl-contain {
-    max-width: 500px;
-}
-
-/* Positioning */
-.position-static {
-    position: static;
-}
-
-.position-relative {
+.grid-item:hover {
+    transform: scale(1.05);
+    z-index: 1;
     position: relative;
 }
 
-.position-absolute {
-    position: absolute;
+/* Improve liveness and aesthetics for links and buttons */
+a, button {
+    transition: all 0.3s ease;
 }
 
-.position-fixed {
-    position: fixed;
+a:hover, button:hover {
+    transform: translateY(-5px);
 }
 
-.position-sticky {
-    position: sticky;
+/* Keyframes for Hover Animation */
+@keyframes hoverFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
